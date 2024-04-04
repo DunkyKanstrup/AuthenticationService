@@ -14,10 +14,21 @@ public class AuthService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    @Autowired
+    private JwtService jwtService;
+
     public String saveUser(UserCredential credential) {
         credential.setPassword(passwordEncoder.encode(credential.getPassword()));
         repository.save(credential);
 
         return "User added to the PARTY";
+    }
+
+    public String generateToken(String username) {
+        return jwtService.generateToken(username);
+    }
+
+    public void validateToken(String token) {
+        jwtService.validateToken(token);
     }
 }

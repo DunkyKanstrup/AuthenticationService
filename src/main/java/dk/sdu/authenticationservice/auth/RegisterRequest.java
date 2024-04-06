@@ -1,14 +1,16 @@
-package dk.sdu.authenticationservice.dto;
+package dk.sdu.authenticationservice.auth;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AuthRequest {
-
-    private String username;
+public class RegisterRequest {
+    private String name;
+    private String email;
     private String password;
 }

@@ -36,7 +36,7 @@ public class AuthService {
                 .build();
     }
 
-    public AuthenticationResponse authenticate(AuthenticationRequest request) {
+    public AuthenticationResponse login(AuthenticationRequest request) {
         // Authenticate the user
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(

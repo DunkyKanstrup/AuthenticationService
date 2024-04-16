@@ -22,6 +22,7 @@ public class JwtService {
     @Value("${jwt.secret}")
     private String secret;
 
+
     public String extractUserEmail(String token) {
         return extractClaim(token, Claims::getSubject);
     }

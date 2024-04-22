@@ -1,4 +1,4 @@
-package dk.sdu.authenticationservice.auth;
+package dk.sdu.authenticationservice.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,6 +9,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AuthenticationResponse {
-    private String token;
+public class AuthRequest {
+    private String name;
+    private String email;
+    private String password;
 }

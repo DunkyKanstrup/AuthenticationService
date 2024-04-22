@@ -1,4 +1,4 @@
-package dk.sdu.authenticationservice.auth;
+package dk.sdu.authenticationservice.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,8 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class RegisterRequest {
-    private String name;
+public class LoginRequest {
     private String email;
     private String password;
 }

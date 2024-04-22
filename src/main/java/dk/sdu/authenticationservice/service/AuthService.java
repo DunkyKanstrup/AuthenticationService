@@ -22,7 +22,6 @@ public class AuthService {
 
     public AuthResponse register(AuthRequest authRequest) {
         User user = User.builder()
-                .uuid(UUID.randomUUID())
                 .name(authRequest.getName())
                 .email(authRequest.getEmail())
                 .password(passwordEncoder.encode(authRequest.getPassword()))

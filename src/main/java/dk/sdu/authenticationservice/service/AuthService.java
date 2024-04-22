@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.UUID;
+
 @Service
 public class AuthService {
     @Autowired
@@ -20,6 +22,7 @@ public class AuthService {
 
     public AuthResponse register(AuthRequest authRequest) {
         User user = User.builder()
+                .uuid(UUID.randomUUID())
                 .name(authRequest.getName())
                 .email(authRequest.getEmail())
                 .password(passwordEncoder.encode(authRequest.getPassword()))

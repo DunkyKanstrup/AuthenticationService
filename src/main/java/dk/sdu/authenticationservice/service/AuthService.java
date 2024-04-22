@@ -36,6 +36,7 @@ public class AuthService {
                     .refreshToken(refreshToken)
                     .build();
         } catch (Exception e) {
+            e.printStackTrace();
             return AuthResponse.builder()
                     .errorMessage("Registration failed")
                     .build();
